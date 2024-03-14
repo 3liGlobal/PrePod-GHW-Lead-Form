@@ -353,7 +353,10 @@ var original_zf_MandArray = [
   "Name_First",
   "Name_Last",
   "Email",
+  "Address_AddressLine1",
   "SingleLine",
+  "Address_City",
+  "Address_Region",
   "Address_ZipCode",
   "Address_Country",
 ];
@@ -152502,7 +152505,7 @@ window.onload = function () {
     //cityDropdown.disabled = true;
     updateStateDropdown();
     // updateStateDropdown1();
-    updateArray();
+    //updateArray();
   };
 
   function updateStateDropdown() {
@@ -152733,7 +152736,7 @@ window.onload = function () {
 
   // Initial setup
   updateStateDropdown();
-  updateArray();
+  //updateArray();
 
   stateText.addEventListener("input", myFunction);
   function myFunction() {
