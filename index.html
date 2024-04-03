@@ -468,7 +468,8 @@
 										</div>
 
 										<div class="zf-clearBoth"></div>
-										<p id="Address_error" class="zf-errorMessage" style="display:none;">Some of the mandatory field is empty
+										<p id="Address_error" class="zf-errorMessage" style="display:none;">Some of the
+											mandatory field is empty
 										</p>
 									</div>
 								</div>
@@ -554,7 +555,7 @@
 							</li>
 							<input type="button" name="previous" class="previous action-button-previous"
 								value="Previous" />
-							<button class="zf-submitColor">Submit</button>
+							<button class="zf-submitColor" id="zf-submitColor">Submit</button>
 						</fieldset>
 
 						<!---------File Upload Ends Here---------->
@@ -655,7 +656,7 @@
 				});
 			});
 		}
-		
+
 		function getAddressDetail(e, thisObj) {
 			let id = thisObj.id;
 			const query = `https://api.addressy.com/Capture/Interactive/Retrieve/v1.2/json3.ws?Key=TY78-BD75-NW81-XE97&Id=${id}`;
@@ -695,6 +696,15 @@
 				event.preventDefault(); // Prevent form from being submitted through enter key
 				zf_ValidateAndSubmit();
 			}
+		});
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script>
+		$('form').submit(function () {
+			$('#zf-submitColor').prop('disabled', true);
+			setTimeout(function () {
+				$('#zf-submitColor').prop('disabled', false);
+			}, 5000);
 		});
 	</script>
 </body>
