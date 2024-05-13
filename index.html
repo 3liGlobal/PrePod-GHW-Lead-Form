@@ -76,7 +76,7 @@
 												<em class="zf-important">*</em>
 											</label>
 											<input type="text" maxlength="255" name="Name_First" fieldType=7
-												placeholder="First Name" autocomplete="off" onkeypress="return blockSpecialChar(event)" />
+												placeholder="First Name" autocomplete="off" oninput="restrictInput(event)" />
 											<p id="Name_error" class="zf-errorMessage" style="display:none;">Invalid
 												value</p>
 										</span>
@@ -86,7 +86,7 @@
 
 											</label>
 											<input type="text" maxlength="255" name="Name_Last" fieldType=7
-												placeholder="Last Name" autocomplete="off" onkeypress="return blockSpecialChar(event)" />
+												placeholder="Last Name" autocomplete="off" oninput="restrictInput(event)" />
 											<p id="Name_error" class="zf-errorMessage" style="display:none;">Invalid
 												value</p>
 
@@ -728,12 +728,20 @@
 		}
 	</script>
 	<script type="text/javascript">
-		function blockSpecialChar(e) {
-			var k;
-			document.all ? k = e.keyCode : k = e.which;
-			return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+		function restrictInput(event) {
+			const regex = /[0-9!@#$%^&*()_+={}\[\]:;"'<,>.?\/\\|`~]/g; // Define the regular expression for numbers and special symbols
+			const inputField = event.target;
+			const newValue = inputField.value.replace(regex, ''); // Remove any numbers and special symbols from the input value
+			inputField.value = newValue; // Set the input value to the cleaned value
 		}
 	</script>
+		<script type="text/javascript">
+			function blockSpecialChar(e) {
+				var k;
+				document.all ? k = e.keyCode : k = e.which;
+				return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+			}
+		</script>
 </body>
 
 </html>
