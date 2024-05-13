@@ -146,17 +146,23 @@ var countries_states = {
   "CAN": {
     "AB": "Alberta",
     "BC": "British Columbia",
+    "BC": "Colombie-Britannique",
     "MB": "Manitoba",
     "NL": "Newfoundland and Labrador",
     "NB": "New Brunswick",
     "NS": "Nova Scotia",
     "NT": "Northwest Territories",
+    "NB": "Nouveau-Brunswick",
+    "NS": "Nouvelle-Écosse",
     "NU": "Nunavut",
     "ON": "Ontario",
     "PE": "Prince Edward Island",
     "QC": "Quebec",
     "SK": "Saskatchewan",
-    "YT": "Yukon Territory"
+    "SK": "Terre-Neuve-et-Labrador",
+    "NT": "Territoires du Nord-Ouest",
+    "YT": "Yukon Territory",
+    "PE": "Île-du-Prince-Édouard"
   },
   "CHE": {
     "AG": "Aargau",
