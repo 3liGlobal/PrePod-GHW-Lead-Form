@@ -690,7 +690,13 @@
 				});
 			});
 		}
-
+		var input = document.querySelector("#international_PhoneNumber_countrycode");
+		input.addEventListener("input", function () {
+			// If "+" is removed, add it back
+			if (!input.value.startsWith("+")) {
+				input.value = "+" + input.value.replace(/[^0-9]/g, ''); // Only allow digits after "+"
+			}
+		});
 		// Business Phone
 		var iti = window.intlTelInput(document.querySelector("#international_PhoneNumber_countrycode"), {
 			separateDialCode: false,
