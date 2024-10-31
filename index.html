@@ -567,7 +567,7 @@
 							</li>
 							<input type="button" name="previous" class="previous action-button-previous"
 								value="Previous" />
-							<button class="zf-submitColor" id="zf-submitColor">Submit</button>
+							<button class="zf-submitColor" id="zf-submitColor" onclick="submitForm(event)">Submit</button>
 						</fieldset>
 
 						<!---------File Upload Ends Here---------->
@@ -581,6 +581,11 @@
 	</div><!-- 'zf-templateWidth' ends -->
 
 	<!-- intl-tel-input JS -->
+	<script>
+        function submitForm(event) {
+            window.open('https://3liglobal.github.io/Staging-Zoho-EU-Form-Thank-You-Page/');
+        }
+    </script>
 	<script type="text/javascript">var zf_DateRegex = new RegExp("^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$");
 		var zf_FieldArray = ["Name_First", "Name_Last", "Email", "PhoneNumber1_countrycode", "PhoneNumber_countrycode", "SingleLine", "Address_AddressLine1", "Address_AddressLine2", "Address_City", "Address_Region", "Address_ZipCode", "Address_Country", "SingleLine1", "MultiLine", "FileUpload", "FileUpload3", "FileUpload2", "FileUpload1"];
 		var isSalesIQIntegrationEnabled = false;
